@@ -3,7 +3,14 @@ require "./manufacturer"
 class Train
   include Manufacturer
   include Instances
+  include InstanceCounter
+  
   attr_reader :number, :type, :route, :carriages, :speed
+  attr_accessor :instances
+
+  def find(id)
+    self.instances[id]
+  end
 
   def initialize(number, type, carriages)
     @number = number

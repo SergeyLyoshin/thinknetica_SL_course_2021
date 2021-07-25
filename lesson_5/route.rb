@@ -1,4 +1,7 @@
 class Route
+
+  include InstanceCounter
+  
   attr_reader :stations
 
   def initialize(from, to)

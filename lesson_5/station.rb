@@ -2,7 +2,14 @@ require "./instances"
 
 class Station
   include Instances
+  include InstanceCounter
+
   attr_reader :name, :trains
+  attr_accessor :instances
+
+  def get_all
+    self.instances
+  end
 
   def initialize(name)
     @name = name
