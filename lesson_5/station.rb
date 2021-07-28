@@ -7,7 +7,7 @@ class Station
   attr_reader :name, :trains
   attr_accessor :instances
 
-  def get_all
+  def all
     self.instances
   end
 
